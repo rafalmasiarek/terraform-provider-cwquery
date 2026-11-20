@@ -1,4 +1,5 @@
 # terraform-provider-cwquery
+![](https://raw.githubusercontent.com/rafalmasiarek/readme-gen/main/banners/.gitkeep)
 
 A small, hand-written SQL-like query language for defining CloudWatch
 alarms. One provider function parses a query string into a structured
@@ -13,6 +14,7 @@ This is a separate provider from
 on purpose - CloudWatch alarm querying is a different domain from
 netutils's networking utilities, not an extension of it.
 
+
 ## Provider configuration
 
 No configuration - `cwquery` is a pure parser with no provider-level state.
@@ -21,11 +23,13 @@ No configuration - `cwquery` is a pure parser with no provider-level state.
 provider "cwquery" {}
 ```
 
+
 ## Functions
 
 | Name    | Summary                                                               |
 | ------- | ---------------------------------------------------------------------- |
 | `parse` | Parses a cwquery string into the structured object described below.   |
+
 
 ### `parse`
 
@@ -78,6 +82,7 @@ is `null`:
 `terraform-aws-cloudwatch/modules/metric-alarm`'s own `metrics` variable -
 assigning the parsed result straight into it needs no transformation.
 
+
 ## Development
 
 ```
@@ -102,6 +107,31 @@ Set `TF_CLI_CONFIG_FILE` to that file's path, then run `terraform plan`
 directly - `terraform init` is unnecessary (and will fail) with
 `dev_overrides` active for a provider.
 
-## Author
 
-[Rafał Masiarek](https://github.com/rafalmasiarek)
+
+## License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+```text
+The MIT License (MIT)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files, to deal in the Software
+without restriction.
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+
+Source: https://opensource.org/licenses/MIT
+```
+See [LICENSE](LICENSE) for full details.
+## Authors
+
+- Rafał Masiarek | [website](https://masiarek.pl) | [email](mailto:rafal@masiarek.pl) | [github](https://github.com/rafalmasiarek)
+
+
+<!-- references -->
+
+[repo_link]: https://github.com/rafalmasiarek/terraform-provider-cwquery
